@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -592,7 +593,7 @@
     .team-card:hover { box-shadow: var(--shadow-md); }
     .team-card__avatar {
       width: 100%;
-      height: 180px;
+      height: 240px;
       overflow: hidden;
       display: flex;
       align-items: center;
@@ -778,11 +779,15 @@
       .nav__links { display: none; }
       .nav__toggle { display: flex; }
 
-      /* Mobile navbar logo adjustments */
+      .nav {
+        top: 0;
+        background: rgba(43, 46, 58, 0.95);
+      }
+
       .nav__logo {
-        margin-left: 0;
-        height: 65px;
-        margin-top: 15px;
+        margin-left: 1rem;
+        height: 60px;
+        margin-top: 12px;
       }
 
       .nav__links.mobile-open {
@@ -936,19 +941,22 @@
         <div class="problem-card__icon problem-card__icon--red">⚠️</div>
         <h3>Missed Medications</h3>
         <p>Patients managing chronic conditions like diabetes, hypertension, or TB frequently miss doses, often without realising the cumulative risk. Reminders alone are not enough; context aware adherence support is essential.</p>
-        <div class="problem-card__stat">Estimated <strong>30 to 50%</strong> of prescribed medications go unadherence in chronic disease patients across India.</div>
+        <div class="problem-card__stat">Studies suggest that <strong>30–50%</strong> of patients with chronic diseases do not take medications as prescribed across many parts of India.</div>
+
       </article>
       <article class="problem-card reveal reveal-delay-2">
         <div class="problem-card__icon problem-card__icon--amber">🚨</div>
         <h3>Emergency Response Gaps</h3>
         <p>In rural and semi-urban India, the time between symptom onset and hospital arrival is critical. Patients often lack structured guidance on what to do, worsening outcomes before care begins.</p>
-        <div class="problem-card__stat">Average emergency response time in rural India exceeds <strong>45 minutes</strong>, critical for conditions like stroke or MI.</div>
+        <div class="problem-card__stat">In many rural regions of India, emergency response times can exceed <strong>45 minutes</strong>, which is critical for time-sensitive conditions such as stroke or myocardial infarction.</div>
+
       </article>
       <article class="problem-card reveal reveal-delay-3">
         <div class="problem-card__icon problem-card__icon--blue">📂</div>
         <h3>Fragmented Health Records</h3>
         <p>Most Indians carry paper records, lose test reports, or repeat investigations unnecessarily. Without a unified, patient-owned health record, every clinical encounter starts from scratch.</p>
-        <div class="problem-card__stat">Only <strong>~15%</strong> of Indians have any form of structured digital health record.</div>
+       <div class="problem-card__stat">It is estimated that <strong>less than 20%</strong> of the population currently has access to structured digital health records.</div>
+
       </article>
     </div>
   </div>
@@ -1357,7 +1365,8 @@
       <article class="research-card reveal reveal-delay-2">
         <div class="research-card__label">🏥 National Health Mission</div>
         <h3>PHC Capacity Gaps</h3>
-        <p>India's National Health Mission reports significant specialist access gaps at Primary Health Centres, motivating PHC Connect's design and scope.</p>
+       <p>National health system reports consistently highlight significant gaps in specialist availability at Primary Health Centres across India, motivating PHC Connect's design and scope.</p>
+
       </article>
       <article class="research-card reveal reveal-delay-3">
         <div class="research-card__label">📱 Digital India &amp; ABDM</div>
@@ -1377,7 +1386,8 @@
       <article class="research-card reveal reveal-delay-3">
         <div class="research-card__label">📈 Emergency Data</div>
         <h3>Pre-Hospital Intervention Evidence</h3>
-        <p>Research on pre-hospital care interventions supports the clinical rationale behind EmergAssist — structured guidance measurably improves outcomes for time-critical conditions.</p>
+        <p>Clinical research on pre-hospital care indicates that early guidance and timely intervention can significantly improve outcomes for time-critical conditions.</p>
+
       </article>
     </div>
     <div class="research-disclaimer reveal">
@@ -1729,3 +1739,4 @@
 </script>
 </body>
 </html>
+```
