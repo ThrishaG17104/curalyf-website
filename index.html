@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -791,20 +791,35 @@
       }
 
       .nav__links.mobile-open {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        inset: 0;
-        top: 56px;
-        background: rgba(250,250,248,.97);
-        backdrop-filter: blur(12px);
-        padding: 2rem;
-        gap: 0;
-        align-items: flex-start;
-        z-index: 99;
-      }
-      .nav__links.mobile-open li { width: 100%; border-bottom: 1px solid var(--border); }
-      .nav__links.mobile-open a { display: block; padding: .9rem 0; font-size: 1rem; }
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  inset: 0;
+  top: 72px;
+  background: #ffffff;
+  padding: 2rem;
+  gap: 0;
+  align-items: flex-start;
+  z-index: 99;
+}
+
+.nav__links.mobile-open li {
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav__links.mobile-open a {
+  display: block;
+  padding: 1rem 0;
+  font-size: 1.05rem;
+  color: var(--navy);   /* 🔥 THIS FIXES VISIBILITY */
+  font-weight: 600;
+}
+
+.nav__links.mobile-open a:hover {
+  color: var(--teal);
+}
+
       .nav__links.mobile-open a::after { display: none; }
 
       .grid-3, .grid-2 { grid-template-columns: 1fr; }
@@ -812,7 +827,15 @@
       .footer__grid { grid-template-columns: 1fr; }
       .footer__bottom { flex-direction: column; gap: .6rem; text-align: center; }
       .cta-banner { padding: 2.2rem 1.5rem; }
-      .diff-section { border-radius: var(--radius); overflow: hidden; }
+      .diff-section {
+    border-radius: var(--radius);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .diff-table {
+    min-width: 720px;
+  }
     }
 
     /* ============================================================
