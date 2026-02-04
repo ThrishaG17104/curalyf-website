@@ -198,6 +198,10 @@
       width: auto;
       display: block;
     }
+@media (max-width: 680px) {
+  .nav__logo {
+    margin-left: 0;   /* reset on mobile */
+  }
 
     .nav__links {
       display: flex; align-items: center; gap: 1.8rem;
@@ -824,6 +828,7 @@
     }
     .toast.show { transform: translateY(0); }
     .toast span { color: var(--teal); font-weight: 600; }
+
   </style>
 </head>
 
