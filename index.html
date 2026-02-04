@@ -762,23 +762,60 @@
       .footer__grid { grid-template-columns: 1fr 1fr; }
     }
 
-    @media (max-width: 680px) {
-      .nav__links { display: none; }
-      .nav__toggle { display: flex; }
+   @media (max-width: 680px) {
 
-      .nav__links.mobile-open {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        inset: 0;
-        top: 56px;
-        background: rgba(250,250,248,.97);
-        backdrop-filter: blur(12px);
-        padding: 2rem;
-        gap: 0;
-        align-items: flex-start;
-        z-index: 99;
-      }
+  /* Force navbar to be semi-transparent navy on phone */
+  .nav {
+    background: rgba(43, 46, 58, 0.5);
+    backdrop-filter: blur(12px);
+  }
+
+  .nav__links { display: none; }
+  .nav__toggle { display: flex; }
+
+  /* Mobile menu background = same semi-transparent navy */
+  .nav__links.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    inset: 0;
+    top: 56px;
+    background: rgba(43, 46, 58, 0.5);
+    backdrop-filter: blur(12px);
+    padding: 2rem;
+    gap: 0;
+    align-items: flex-start;
+    z-index: 99;
+  }
+
+  .nav__links.mobile-open li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .nav__links.mobile-open a {
+    display: block;
+    padding: .9rem 0;
+    font-size: 1rem;
+    color: #ffffff;
+  }
+
+  .nav__links.mobile-open a::after { display: none; }
+
+  .grid-3, .grid-2 { grid-template-columns: 1fr; }
+  .form-row--inline { grid-template-columns: 1fr; }
+  .footer__grid { grid-template-columns: 1fr; }
+  .footer__bottom { flex-direction: column; gap: .6rem; text-align: center; }
+  .cta-banner { padding: 2.2rem 1.5rem; }
+
+  /* Allow horizontal scroll for table */
+  .diff-section {
+    border-radius: var(--radius);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
       .nav__links.mobile-open li { width: 100%; border-bottom: 1px solid var(--border); }
       .nav__links.mobile-open a { display: block; padding: .9rem 0; font-size: 1rem; }
       .nav__links.mobile-open a::after { display: none; }
