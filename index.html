@@ -764,24 +764,22 @@
 
    @media (max-width: 680px) {
 
-  /* Force navbar to be semi-transparent navy on phone */
+  /* Force navbar to be navy blue on phone */
   .nav {
-    background: rgba(43, 46, 58, 0.5);
-    backdrop-filter: blur(12px);
+    background: linear-gradient(155deg, var(--navy) 0%, #162d3e 55%, #1e3f52 100%);
   }
 
   .nav__links { display: none; }
   .nav__toggle { display: flex; }
 
-  /* Mobile menu background = same semi-transparent navy */
+  /* Mobile menu background = navy blue */
   .nav__links.mobile-open {
     display: flex;
     flex-direction: column;
     position: fixed;
     inset: 0;
     top: 56px;
-    background: rgba(43, 46, 58, 0.5);
-    backdrop-filter: blur(12px);
+    background: linear-gradient(155deg, var(--navy) 0%, #162d3e 55%, #1e3f52 100%);
     padding: 2rem;
     gap: 0;
     align-items: flex-start;
@@ -808,7 +806,7 @@
   .footer__bottom { flex-direction: column; gap: .6rem; text-align: center; }
   .cta-banner { padding: 2.2rem 1.5rem; }
 
-  /* Allow horizontal scroll for table */
+  /* Allow horizontal scroll for comparison table */
   .diff-section {
     border-radius: var(--radius);
     overflow-x: auto;
