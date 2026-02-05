@@ -236,13 +236,15 @@
       background: none; border: none; cursor: pointer;
       padding: .4rem;
     }
-    .nav__toggle span {
-      display: block;
-      width: 24px; height: 2px;
-      background: #ffffff;
-      border-radius: 2px;
-      transition: transform .3s, opacity .3s;
-    }
+   .nav__toggle span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 3px;
+  transition: transform .3s, opacity .3s;
+}
+
     .nav__toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .nav__toggle.open span:nth-child(2) { opacity: 0; }
     .nav__toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
@@ -434,9 +436,9 @@
 
 
 .diff-table {
-  width: 100%;
+ width: max-content;
   border-collapse: collapse;
-  min-width: 700px;
+  min-width: 760px;
       font-size: .9rem;
     }
     .diff-table th {
@@ -846,7 +848,12 @@
       .footer__grid { grid-template-columns: 1fr; }
       .footer__bottom { flex-direction: column; gap: .6rem; text-align: center; }
       .cta-banner { padding: 2.2rem 1.5rem; }
-      .diff-section { border-radius: var(--radius); overflow: hidden; }
+      .diff-section {
+  border-radius: var(--radius);
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
     }
 
     /* ============================================================
