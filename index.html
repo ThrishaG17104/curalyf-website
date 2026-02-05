@@ -1659,11 +1659,15 @@ Surveyed providers report that fragmented records and multiple unlinked consulta
   const navToggle = document.getElementById('navToggle');
   let lastScroll  = 0;
 
-  window.addEventListener('scroll', () => {
-    const current = window.scrollY;
-    nav.classList.toggle('scrolled', current > 40);
-    lastScroll = current;
-  }, { passive: true });
+  const hero = document.querySelector('.hero');
+
+window.addEventListener('scroll', () => {
+  const heroBottom = hero.offsetTop + hero.offsetHeight;
+  const trigger = window.scrollY > (heroBottom - 80); // small buffer
+
+  nav.classList.toggle('scrolled', trigger);
+}, { passive: true });
+
 
   // ---- MOBILE MENU ----
   navToggle.addEventListener('click', () => {
