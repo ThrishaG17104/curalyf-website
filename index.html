@@ -1589,7 +1589,18 @@ Surveyed providers report that fragmented records and multiple unlinked consulta
           </div>
         </div>
       </div>
-      <form class="contact-form reveal reveal-delay-2" id="contactForm" novalidate>
+     <form class="contact-form reveal reveal-delay-2"
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="contact">
+
+<p style="display:none">
+  <label>Don’t fill this out: <input name="bot-field"></label>
+</p>
+
+
         <div class="form-row--inline">
           <div class="form-row">
             <label for="fname">First Name</label>
@@ -1767,45 +1778,7 @@ window.addEventListener('scroll', () => {
   reveals.forEach(el => revealObserver.observe(el));
 
   // ---- CONTACT FORM ----
-  const form  = document.getElementById('contactForm');
-  const toast = document.getElementById('toast');
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    // Basic client-side validation
-    const fname = document.getElementById('fname').value.trim();
-    const lname = document.getElementById('lname').value.trim();
-    const email = document.getElementById('email').value.trim();
-
-    if (!fname || !lname || !email) {
-      alert('Please fill in your name and email address.');
-      return;
-    }
-
-    // Simple email pattern check
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-      alert('Please enter a valid email address.');
-      return;
-    }
-
-    // Simulate submission (replace with actual endpoint / mailto / Formspree etc.)
-    const btn = form.querySelector('button[type="submit"]');
-    btn.textContent = 'Sending…';
-    btn.disabled = true;
-
-    setTimeout(() => {
-      // Show toast
-      toast.classList.add('show');
-      setTimeout(() => toast.classList.remove('show'), 4200);
-
-      // Reset form
-      form.reset();
-      btn.textContent = 'Send Message';
-      btn.disabled = false;
-    }, 1200);
-  });
+  
 
   // ---- SMOOTH SCROLL for anchor links ----
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
