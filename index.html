@@ -848,6 +848,24 @@
     }
     .toast.show { transform: translateY(0); }
     .toast span { color: var(--teal); font-weight: 600; }
+/* ===== MOBILE NAV TRANSPARENT + GREY LINKS ===== */
+@media (max-width: 680px) {
+
+  .nav {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .nav__links a {
+    color: #9CA3AF !important;   /* grey */
+  }
+
+  .nav__toggle span {
+    background: #9CA3AF !important;  /* hamburger icon grey */
+  }
+
+}
+
 
   </style>
 </head>
@@ -1288,12 +1306,18 @@
         <p>We listened to patients in cities and villages before writing a single line of code. Curalyf is built around real problems, not assumed ones.</p>
         <div style="margin-top:1.5rem;">
           <div style="background:rgba(42,157,143,.1); border-radius:10px; padding:1.2rem 1.4rem; margin-bottom:.8rem;">
-            <h4 style="font-size:.92rem; margin-bottom:.2rem;">💊 Diabetes Patient, Pune</h4>
-            <p style="font-size:.85rem; margin:0;">"I take 7 medications a day. The app tells me which one, when, and warns me if I'm about to take something wrong."</p>
+            <h4 style="font-size:.92rem; margin-bottom:.2rem;">📊 Adherence Research Finding</h4>
+<p style="font-size:.85rem; margin:0;">
+Our hospital-based patient survey showed that forgetfulness causes 66.9% of missed medication doses — highlighting why intelligent adherence support is critical.
+</p>
+
           </div>
           <div style="background:rgba(42,157,143,.1); border-radius:10px; padding:1.2rem 1.4rem; margin-bottom:.8rem;">
-            <h4 style="font-size:.92rem; margin-bottom:.2rem;">👨‍👧 Caregiver, rural Rajasthan</h4>
-            <p style="font-size:.85rem; margin:0;">"My mother's doctor is 80 km away. PHC Connect meant she got a specialist opinion without leaving the village."</p>
+           <h4 style="font-size:.92rem; margin-bottom:.2rem;">🚨 Emergency Care Survey Data</h4>
+<p style="font-size:.85rem; margin:0;">
+In our patient survey, over 55% reported being unsure what to do first during a medical emergency, and 41% struggled to identify the right hospital quickly.
+</p>
+
           </div>
         </div>
       </div>
@@ -1318,12 +1342,17 @@
         <p>Designed in consultation with MBBS students, PHC doctors, and specialists. Curalyf respects clinical decision-making and positions AI as a support layer, never a replacement.</p>
         <div style="margin-top:1.5rem;">
           <div style="background:rgba(42,157,143,.1); border-radius:10px; padding:1.2rem 1.4rem; margin-bottom:.8rem;">
-            <h4 style="font-size:.92rem; margin-bottom:.2rem;">🏥 PHC Doctor, Madhya Pradesh</h4>
-            <p style="font-size:.85rem; margin:0;">"I see 60 patients a day. When I can ping a specialist and get a structured second opinion in 10 minutes, the quality of care changes completely."</p>
+           <h4 style="font-size:.92rem; margin-bottom:.2rem;">🏥 PHC Care Gap Data</h4>
+<p style="font-size:.85rem; margin:0;">
+Provider survey results show that 21% of clinicians report difficulty guiding patients remotely in urgent situations — reinforcing the need for PHC-to-specialist telemedicine layers.
+</p>
+
           </div>
           <div style="background:rgba(42,157,143,.1); border-radius:10px; padding:1.2rem 1.4rem;">
-            <h4 style="font-size:.92rem; margin-bottom:.2rem;">👨‍⚕️ Specialist, Bangalore</h4>
-            <p style="font-size:.85rem; margin:0;">"Patients arrive with organised records and a clear medication history. That alone saves me 15 minutes per consultation."</p>
+            <h4 style="font-size:.92rem; margin-bottom:.2rem;">📊 Clinical Continuity Gap</h4>
+<p style="font-size:.85rem; margin:0;">
+Surveyed providers report that fragmented records and multiple unlinked consultations (25.7%) significantly affect treatment decisions — reinforcing the need for connected health records.
+</p>
           </div>
         </div>
       </div>
@@ -1600,7 +1629,7 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <span>© 2025 Curalyf. All rights reserved.</span>
+      <span>© 2025 Curalyf Health Solutions. All rights reserved.</span>
       <div>
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Service</a>
@@ -1739,4 +1768,3 @@
 </script>
 </body>
 </html>
-```
