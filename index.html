@@ -430,22 +430,24 @@
     /* ============================================================
        DIFFERENTIATOR / COMPARISON TABLE
        ============================================================ */
-   .diff-section {
-  display: block;
+   /* ===== SCROLLABLE COMPARISON TABLE FIX ===== */
+.diff-section {
   width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
-  touch-action: pan-x;
 }
 
+.diff-section table {
+  border-collapse: collapse;
+}
 
 .diff-table {
- width: max-content;
-  border-collapse: collapse;
-  min-width: 760px;
-      font-size: .9rem;
-    }
+  min-width: 900px;   /* forces horizontal scroll on phones */
+  width: 100%;
+  font-size: .9rem;
+}
+
     .diff-table th {
       text-align: left;
       padding: 1rem 1.2rem;
@@ -859,9 +861,8 @@
       .footer__bottom { flex-direction: column; gap: .6rem; text-align: center; }
       .cta-banner { padding: 2.2rem 1.5rem; }
       .diff-section {
-  border-radius: var(--radius);
   overflow-x: auto;
-  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
     }
